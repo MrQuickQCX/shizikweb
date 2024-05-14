@@ -70,9 +70,6 @@ p {
     margin-top: 15px;
 }
 
-#about:hover {
-    color: #ff893e;
-}
 
 @media (max-width: 1200px) {
     .popup-container {
