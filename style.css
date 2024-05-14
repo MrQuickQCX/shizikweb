@@ -24,7 +24,7 @@ body {
     background: #fff;
     box-shadow: 0 0 40px rgba(128, 128, 128, 0.105);
     border-radius: 30px;
-    padding: 60px 0;
+    padding: 30px 0;
     text-align: center;
 }
 
@@ -55,6 +55,23 @@ p {
 
 #start:hover {
     scale: 1.05;
+}
+
+#about {
+    font-size: 16px;
+    color: #c0bfbf;
+    background-color: rgba(255, 255, 255, 0);
+    font-weight: 700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s;
+    margin-top: 15px;
+}
+
+#about:hover {
+    color: #ff893e;
 }
 
 @media (max-width: 1200px) {
