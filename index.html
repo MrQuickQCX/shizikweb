@@ -14,12 +14,20 @@
                 <strong>Shizik | Чат-менеджер</strong> является ботом-помощником для вашего чата
             </p>
             <button id="start">Начать!</button>
+            <center>
+                <button id="about">О боте</button>
+            </center>
         </div>
     </div>
     <script>
-        const btn = document.getElementById("start")
-        btn.addEventListener("click", function() {
+        const start_button = document.getElementById("start")
+        start_button.addEventListener("click", function() {
             window.open('https://t.me/shizik_cm_bot', '_blank');
+        })
+
+        const about_button = document.getElementById("about")
+        about_button.addEventListener("click", function() {
+            alert("Данная функция временно не работает");
         })
     </script>
 </body>
