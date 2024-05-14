@@ -40,7 +40,7 @@ p {
     line-height: 1.4;
 }
 
-button {
+#start {
     font-size: 20px;
     padding: 14px 42px;
     color: #fff;
@@ -53,6 +53,15 @@ button {
     transition: all 0.3s;
 }
 
-button:hover {
-    transform: scale(1.05);
+#about {
+    font-size: 20px;
+    padding: 14px 42px;
+    color: #fff;
+    font-weight: 700;
+    background: linear-gradient(to right, #ff5300, #ff893e);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s;
 }
