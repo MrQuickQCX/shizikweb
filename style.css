@@ -28,17 +28,6 @@ section {
     text-align: center;
 }
 
-@media (max-width: 400px) {
-    .popup-container {
-        width: 200px;
-        background: #fff;
-        box-shadow: 0 0 40px rgba(128, 128, 128, 0.105);
-        border-radius: 30px;
-        padding: 60px 0;
-        text-align: center;
-    }
-}
-
 h2 {
     font-size: 30px;
     margin-bottom: 20px;
