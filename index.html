@@ -7,16 +7,26 @@
     <title>Shizik</title>
 </head>
 <body>
-    <div id="popup-parent">
-        <div class="popup-container" id="popup-form">
-            <h2>Shizik | Чат-менеджер</h2>
-            <p>
+    <div id="parent">
+        <div class="container">
+            <h2 class="container_title">Shizik | Чат-менеджер</h2>
+            <p class="container_description">
                 <strong>Shizik | Чат-менеджер</strong> является ботом-помощником для вашего чата
             </p>
             <button id="start">Начать!</button>
             <center>
                 <button id="about">О боте</button>
             </center>
+        </div>
+    </div>
+    <div class="popup__about" id="popup__about">
+        <div class="popup__about_container" id="popup__about_container">
+            <div class="popup__about_body" id="popup__about_body">
+                <h3 class="popup__about_body___h3">О боте</h1>
+                    <button class="popup__about_body___close" id="close_about_popup">
+                        &#10006
+                    </button>
+            </div>
         </div>
     </div>
     <script>
@@ -26,9 +36,22 @@
         })
 
         const about_button = document.getElementById("about")
-        about_button.addEventListener("click", function() {
-            alert("Данная функция временно не работает");
+        const close_about_popup = document.getElementById("close_about_popup")
+        const about_popup = document.getElementById("popup__about")
+        const about_popup_body = document.getElementById("popup__about_body")
+
+        about_button.addEventListener("click", function(e) {
+            e.preventDefault()
+            about_popup.classList.add("active")
+            about_popup_body.classList.add("active")
         })
+
+        close_about_popup.addEventListener("click", function(e) {
+            e.preventDefault()
+            about_popup.classList.remove("active")
+            about_popup_body.classList.remove("active")
+        })
+
     </script>
 </body>
 </html>
