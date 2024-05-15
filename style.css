@@ -10,7 +10,7 @@ body {
     color: #333;
 }
 
-#popup-parent {
+#parent {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -19,7 +19,7 @@ body {
     position: relative;
 }
 
-.popup-container {
+.container {
     width: 380px;
     background: #fff;
     box-shadow: 0 0 40px rgba(128, 128, 128, 0.105);
@@ -28,13 +28,13 @@ body {
     text-align: center;
 }
 
-h2 {
+.container_title {
     font-size: 30px;
     margin-bottom: 20px;
     color: #ff893e;
 }
 
-p {
+.container_description {
     font-size: 16px;
     margin-bottom: 24px;
     line-height: 1.4;
@@ -53,8 +53,10 @@ p {
     transition: all 0.3s;
 }
 
-#start:hover {
-    scale: 1.05;
+@media (hover: hover) {
+    #start:hover {
+        scale: 1.05;
+    }
 }
 
 #about {
@@ -70,27 +72,86 @@ p {
     margin-top: 15px;
 }
 
+.popup__about {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+.popup__about.active {
+    display: block;
+}
+
+.popup__about_container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.popup__about_body {
+    width: 380px;
+    height: 200px;
+    background: #fff;
+    box-shadow: 0 0 40px rgba(128, 128, 128, 0.105);
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s;
+    transform: translateY(50px) scale(0);
+}
+
+.popup__about_body.active {
+    margin: auto;
+    width: 380px;
+    height: 200px;
+    background: #fff;
+    box-shadow: 0 0 40px rgba(128, 128, 128, 0.105);
+    border-radius: 30px;
+    text-align: center;
+    position: relative;
+    transform: translateY(0px) scale(1);
+}
+
+.popup__about_body___h3 {
+    margin-top: 20px;
+}
+
+.popup__about_body___close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+
+@media (hover: hover) {
+    #about:hover {
+        color: #ff893e;
+    }
+}
 
 @media (max-width: 1200px) {
-    .popup-container {
-        width: 380px;
-    }
 }
 
 @media (max-width: 1000px) {
-    .popup-container {
-        width: 380px;
-    }
 }
 
 @media (max-width: 768px) {
-    .popup-container {
-        width: 380px;
-    }
 }
 
 @media (max-width: 480px) {
-    .popup-container {
+    .container {
+        width: 92%;
+    }
+    .popup__about_body {
         width: 92%;
     }
 }
